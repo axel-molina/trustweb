@@ -84,7 +84,7 @@
               Trust Digital Producer es una empresa de Marketing Digital Orgánico destinada a potenciar proyectos de tipo empresarial, profesional y artístico.
             </p>
             <p class="font-italic">
-              Ofrecemos servicios de Social Media Management y Community Management, Gestión de Ventas a través de Mercado Libre, entrega de estadísticas, desarrollo y diseño web adaptable del proyecto, y todas las paqueterías incluyen diseño integral, ya que el equipo de trabajo cuenta con expertos en todas las áreas.
+              Ofrecemos servicios de Social Media Management y Community Management, Gestión de Ventas a través de Mercado Libre, entrega de estadísticas, desarrollo y diseño web adaptable del proyecto, todas las paqueterías incluyen diseño integral, ya que el equipo de trabajo cuenta con expertos en todas las áreas.
             </p>
             <p class="font-italic">
               Potenciá tus ventas, tu llegada y tu imagen dentro de las redes sociales; mejorá tu posicionamiento web, o creá un sitio/tienda al que todos quieran visitar.
@@ -307,26 +307,31 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0">
 
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="forms/contact.php" method="POST" role="form" class="php-email-form">
               <div class="form-row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="nombre" class="form-control" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <input type="text" name="nombre" class="form-control" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Por favor complete este campo" required />
                   <div class="validate"></div>
                 </div>
                 <div class="col-md-6 form-group">
-                  <input type="email" class="form-control" name="correo" id="email" placeholder="Email" data-rule="email" data-msg="Please enter a valid email" />
+                  <input type="email" class="form-control" name="correo" id="email" placeholder="Email" data-rule="email" data-msg="Por favor complete este campo" required />
                   <div class="validate"></div>
                 </div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="asunto" id="subject" placeholder="Asunto" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <input type="text" class="form-control" name="asunto" id="subject" placeholder="Asunto" data-rule="minlen:4" data-msg="Por favor complete este campo" required/>
                 <div class="validate"></div>
               </div>
               <div class="form-group">
-                <textarea class="form-control" name="mensaje" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Mensaje"></textarea>
+                <textarea class="form-control" minlength="10" name="mensaje" rows="5" data-rule="required" data-msg="Por favor complete este campo" placeholder="Mensaje" required></textarea>
                 <div class="validate"></div>
               </div>
-              <div class="text-center"><button type="submit">Enviar mensaje</button></div>
+              <div class="text-center form-group"><button type="submit">Enviar mensaje</button></div>
+
+              <div class="alert d-none" id="alerta">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <strong class="respuesta"></strong> <span class="mensaje-alerta"></span>
+              </div>
             </form>
 
           </div>
@@ -352,6 +357,7 @@
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="assets/vendor/jquery/jquery.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
@@ -362,6 +368,7 @@
   <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
   <script src="assets/vendor/counterup/counterup.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/js/enviar.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
