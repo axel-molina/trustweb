@@ -3,6 +3,10 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
+    display: none;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
@@ -50,52 +54,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #ffc451;
 }
 
-/*--------------------------------------------------------------
-# Preloader
---------------------------------------------------------------*/
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 9999;
-  overflow: hidden;
-  background: #151515;
-}
 
-#preloader:before {
-  content: "";
-  position: fixed;
-  top: calc(50% - 0px);
-  left: calc(50% - 30px);
-  border: 6px solid #ffc451;
-  border-top-color: #151515;
-  border-bottom-color: #151515;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  -webkit-animation: animate-preloader 1s linear infinite;
-  animation: animate-preloader 1s linear infinite;
-}
-
-@-webkit-keyframes animate-preloader {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes animate-preloader {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
@@ -467,6 +426,9 @@ h1, h2, h3, h4, h5, h6 {
   border-color: #ffc451;
 }
 
+
+
+
 @media (min-width: 1024px) {
   #hero {
     background-attachment: fixed;
@@ -658,13 +620,24 @@ section {
   margin: 0 auto;
   width: 64px;
   height: 64px;
-  background: #ffc451;
   border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
   transition: 0.3s;
+}
+
+.bronze{
+  background: #cd7f32;
+}
+
+.silver{
+  background: silver;
+}
+
+.gold{
+  background: gold;
 }
 
 .services .icon-box .icon i {
@@ -698,6 +671,39 @@ section {
   border-color: #fff;
   box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
   transform: translateY(-10px);
+}
+
+.icon-box strong, ul li{
+  text-align: left;
+}
+
+.services .metodos-pagos{
+  margin-top: 40px;
+  text-align: center;
+}
+
+@media (max-width: 769px){
+  .services .icon-box{
+    margin-left: 18%;
+  }
+}
+
+@media (max-width: 480px){
+  .services .icon-box{
+    margin-left: 18%;
+  }
+}
+
+@media (max-width: 360px){
+  .services .icon-box{
+    margin-left: 14%;
+  }
+}
+
+@media (max-width: 320px){
+  .services .icon-box{
+    margin-left: 9%;
+  }
 }
 
 /*--------------------------------------------------------------
