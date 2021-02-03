@@ -677,34 +677,29 @@ section {
   text-align: left;
 }
 
-.services .metodos-pagos{
-  margin-top: 40px;
+
+.services .container .metodos {
+  margin-top: 20px;
   text-align: center;
 }
 
+.metodos {
+  margin-left: 28%; 
+}
+
+
+@media (max-width: 980px){
+  .metodos{
+    margin-left: 17%;
+  }
+}
+
 @media (max-width: 769px){
-  .services .icon-box{
-    margin-left: 18%;
+  .metodos{
+    margin-left: -1%;
   }
 }
 
-@media (max-width: 480px){
-  .services .icon-box{
-    margin-left: 18%;
-  }
-}
-
-@media (max-width: 360px){
-  .services .icon-box{
-    margin-left: 14%;
-  }
-}
-
-@media (max-width: 320px){
-  .services .icon-box{
-    margin-left: 9%;
-  }
-}
 
 /*--------------------------------------------------------------
 # Cta
@@ -1555,7 +1550,7 @@ section {
 
 #footer .copyright {
   text-align: center;
-  padding-top: 30px;
+  padding-top: 90px;
 }
 
 #footer .credits {
@@ -1563,4 +1558,11 @@ section {
   text-align: center;
   font-size: 13px;
   color: #fff;
+}
+
+#footer .afip img{
+  width: 5%;
+  margin-left: 80%;
+  margin-top: -6%;
+  
 }
