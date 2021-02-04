@@ -78,26 +78,13 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(0, 0, 0, 0.8);
 }
 
-#header .logo {
-  font-size: 32px;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
 
-#header .logo a {
-  color: #fff;
-}
-
-#header .logo a span {
-  color: #ffc451;
-}
 
 #header .logo img {
-  max-height: 40px;
+  max-height: 150px;
+  margin-bottom: -100%;
+  position: relative;
+  bottom: 66px;  
 }
 
 /*--------------------------------------------------------------
@@ -342,6 +329,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .mobile-nav-active .mobile-nav-toggle i {
   color: #fff;
+}
+
+.mobile-nav img {
+  display: none;
 }
 
 /*--------------------------------------------------------------
@@ -655,10 +646,6 @@ section {
 .services .icon-box h4 a {
   color: #151515;
   transition: ease-in-out 0.3s;
-}
-
-.services .icon-box h4 a:hover {
-  color: #ffc451;
 }
 
 .services .icon-box p {
@@ -1417,43 +1404,22 @@ section {
 --------------------------------------------------------------*/
 #footer {
   background: black;
-  padding: 0 0 30px 0;
+  padding: 0 0 10px 0;
   color: #fff;
   font-size: 14px;
 }
 
-#footer .footer-top {
-  background: #151515;
-  border-bottom: 1px solid #222222;
-  padding: 60px 0 30px 0;
+#footer .container {
+  /* height: 210px; */
+  display: flex;
+  justify-content: space-between;
 }
 
-#footer .footer-top .footer-info {
-  margin-bottom: 30px;
+#footer .social-links {
+  margin-right: 90px;
 }
 
-#footer .footer-top .footer-info h3 {
-  font-size: 28px;
-  margin: 0 0 20px 0;
-  padding: 2px 0 2px 0;
-  line-height: 1;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-#footer .footer-top .footer-info h3 span {
-  color: #ffc451;
-}
-
-#footer .footer-top .footer-info p {
-  font-size: 14px;
-  line-height: 24px;
-  margin-bottom: 0;
-  font-family: "Raleway", sans-serif;
-  color: #fff;
-}
-
-#footer .footer-top .social-links a {
+#footer .social-links a {
   font-size: 18px;
   display: inline-block;
   background: #292929;
@@ -1468,101 +1434,35 @@ section {
   transition: 0.3s;
 }
 
-
-#footer .footer-top h4 {
-  font-size: 16px;
-  font-weight: 600;
-  color: #fff;
-  position: relative;
-  padding-bottom: 12px;
-}
-
-#footer .footer-top .footer-links {
-  margin-bottom: 30px;
-}
-
-#footer .footer-top .footer-links ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-#footer .footer-top .footer-links ul i {
-  padding-right: 2px;
-  color: #ffc451;
-  font-size: 18px;
-  line-height: 1;
-}
-
-#footer .footer-top .footer-links ul li {
-  padding: 10px 0;
-  display: flex;
-  align-items: center;
-}
-
-#footer .footer-top .footer-links ul li:first-child {
-  padding-top: 0;
-}
-
-#footer .footer-top .footer-links ul a {
-  color: #fff;
-  transition: 0.3s;
-  display: inline-block;
-  line-height: 1;
-}
-
-#footer .footer-top .footer-links ul a:hover {
-  color: #ffc451;
-}
-
-#footer .footer-top .footer-newsletter form {
-  margin-top: 30px;
-  background: #fff;
-  padding: 6px 10px;
-  position: relative;
-  border-radius: 4px;
-}
-
-#footer .footer-top .footer-newsletter form input[type="email"] {
-  border: 0;
-  padding: 4px;
-  width: calc(100% - 110px);
-}
-
-#footer .footer-top .footer-newsletter form input[type="submit"] {
-  position: absolute;
-  top: 0;
-  right: -2px;
-  bottom: 0;
-  border: 0;
-  background: none;
-  font-size: 16px;
-  padding: 0 20px;
-  background: #ffc451;
-  color: #151515;
-  transition: 0.3s;
-  border-radius: 0 4px 4px 0;
-}
-
-#footer .footer-top .footer-newsletter form input[type="submit"]:hover {
-  background: #ffcd6b;
-}
-
 #footer .copyright {
   text-align: center;
-  padding-top: 90px;
-}
-
-#footer .credits {
-  padding-top: 10px;
-  text-align: center;
-  font-size: 13px;
-  color: #fff;
 }
 
 #footer .afip img{
-  width: 5%;
-  margin-left: 80%;
-  margin-top: -6%;
-  
+  max-width: 70px;
+  margin-top: 30px;
+}
+
+#footer .container .logo-footer {
+  display: inline-block;
+}
+
+#footer .container .logo-footer a img{
+  max-width: 140px;
+}
+
+@media (max-width: 460px){
+  #footer .container .social-links {
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 380px){
+  #footer .container .social-links {
+    margin-right: 3px;
+  }
+
+  #footer .container .social-links a{
+    margin-right: 2px;
+  }
 }
