@@ -607,7 +607,7 @@ section {
   background: #fff;
 }
 
-.services .icon-box .icon {
+.services .icon-box .icon img{
   margin: 0 auto;
   width: 64px;
   height: 64px;
@@ -619,17 +619,6 @@ section {
   transition: 0.3s;
 }
 
-.bronze{
-  background: #cd7f32;
-}
-
-.silver{
-  background: silver;
-}
-
-.gold{
-  background: gold;
-}
 
 .services .icon-box .icon i {
   color: #151515;
